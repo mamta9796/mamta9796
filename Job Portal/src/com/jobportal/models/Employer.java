@@ -3,45 +3,25 @@ package com.jobportal.models;
 public class Employer {
 	
 	
-	private String Email;
+	private String email;
 	private String password;
-	private String Loc;
-	private String CompanyName;
-	private String IndustryType;
-	private String Type;
-	private String EmployerName;
-	private String Des;
-	private String Address;
-	private String Country;
-	private String State;
-	private String City;
-	private Long PinCode;
-	private Long MobileNo;
-	
-	
-	public String getType() {
-		return Type;
-	}
-	public void setType(String type) {
-		Type = type;
-	}
-	public String getCompanyName() {
-		return CompanyName;
-	}
-	public void setCompanyName(String companyName) {
-		CompanyName = companyName;
-	}
-	public String getEmployerName() {
-		return EmployerName;
-	}
-	public void setEmployerName(String employerName) {
-		EmployerName = employerName;
-	}
+	private String loc;
+	private String companyName;
+	private String industryType;
+	private String type;
+	private String employerName;
+	private String des;
+	private String address;
+	private String country;
+	private String state;
+	private String city;
+	private Long pinCode;
+	private Long mobileNo;
 	public String getEmail() {
-		return Email;
+		return email;
 	}
 	public void setEmail(String email) {
-		Email = email;
+		this.email = email;
 	}
 	public String getPassword() {
 		return password;
@@ -49,60 +29,80 @@ public class Employer {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public Long getMobileNo() {
-		return MobileNo;
-	}
-	public void setMobileNo(Long mobileNo) {
-		MobileNo = mobileNo;
-	}
 	public String getLoc() {
-		return Loc;
+		return loc;
 	}
 	public void setLoc(String loc) {
-		Loc = loc;
+		this.loc = loc;
+	}
+	public String getCompanyName() {
+		return companyName;
+	}
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
 	}
 	public String getIndustryType() {
-		return IndustryType;
+		return industryType;
 	}
-	public void setIndusrtyType(String indusrtyType) {
-		IndustryType = indusrtyType;
+	public void setIndustryType(String industryType) {
+		this.industryType = industryType;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public String getEmployerName() {
+		return employerName;
+	}
+	public void setEmployerName(String employerName) {
+		this.employerName = employerName;
 	}
 	public String getDes() {
-		return Des;
+		return des;
 	}
 	public void setDes(String des) {
-		Des = des;
-	}
-	public String getCountry() {
-		return Country;
-	}
-	public void setCountry(String country) {
-		Country = country;
-	}
-	public String getCity() {
-		return City;
-	}
-	public void setCity(String city) {
-		City = city;
-	}
-	public String getState() {
-		return State;
-	}
-	public void setState(String state) {
-		State = state;
-	}
-	public Long getPinCode() {
-		return PinCode;
-	}
-	public void setPinCode(Long pinCode) {
-		PinCode = pinCode;
+		this.des = des;
 	}
 	public String getAddress() {
-		return Address;
+		return address;
 	}
 	public void setAddress(String address) {
-		Address = address;
+		this.address = address;
 	}
+	public String getCountry() {
+		return country;
+	}
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public Long getPinCode() {
+		return pinCode;
+	}
+	public void setPinCode(Long pinCode) {
+		this.pinCode = pinCode;
+	}
+	public Long getMobileNo() {
+		return mobileNo;
+	}
+	public void setMobileNo(Long mobileNo) {
+		this.mobileNo = mobileNo;
+	}
+	
+	
 	
 
 	

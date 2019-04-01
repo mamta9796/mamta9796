@@ -1,22 +1,22 @@
 package com.jobportal.models;
 
 public class User {
-	private String Name;
-	private String Email;
+	private String name;
+	private String email;
 	private String password;
-	private Long MobileNo;
-	private String CurrentLoc;
+	private Long mobileNo;
+	private String currentLoc;
 	public String getName() {
-		return Name;
+		return name;
 	}
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 	public String getEmail() {
-		return Email;
+		return email;
 	}
 	public void setEmail(String email) {
-		Email = email;
+		this.email = email;
 	}
 	public String getPassword() {
 		return password;
@@ -24,18 +24,18 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public 	Long getMobileNo() {
-		return MobileNo;
+	public Long getMobileNo() {
+		return mobileNo;
 	}
 	public void setMobileNo(Long mobileNo) {
-		MobileNo = mobileNo;
+		this.mobileNo = mobileNo;
 	}
 	public String getCurrentLoc() {
-		return CurrentLoc;
+		return currentLoc;
 	}
 	public void setCurrentLoc(String currentLoc) {
-		CurrentLoc = currentLoc;
+		this.currentLoc = currentLoc;
 	}
 	
-	
+		
 }

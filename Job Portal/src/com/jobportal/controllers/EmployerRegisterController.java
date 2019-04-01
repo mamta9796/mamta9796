@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.jobportal.daos.EmployerDao;
-import com.jobportal.daosimpl.EmlpoyerDaoImpl;
+import com.jobportal.daosimpl.EmployerDaoImpl;
 import com.jobportal.models.Employer;
 
 
@@ -43,7 +43,7 @@ public class EmployerRegisterController extends HttpServlet {
 			obj1.setPassword(s2);
 			obj1.setLoc(s3);
 			obj1.setCompanyName(s4);
-			obj1.setIndusrtyType(s5);
+			obj1.setIndustryType(s5);
 			obj1.setType(s6);
 			obj1.setEmployerName(s7);
 			obj1.setDes(s8);
@@ -55,7 +55,7 @@ public class EmployerRegisterController extends HttpServlet {
 			obj1.setMobileNo(Long.parseLong(s14));
 			
 			
-			EmployerDao obj=new EmlpoyerDaoImpl();
+			EmployerDao obj=new EmployerDaoImpl();
 			boolean obj2=obj.EmployerRegister(obj1);
 			if(obj2==false) {
 				out.println("Problem in Registering User. Try again");
