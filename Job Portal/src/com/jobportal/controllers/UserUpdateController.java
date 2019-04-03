@@ -40,9 +40,9 @@ public class UserUpdateController extends HttpServlet {
 			boolean obj2=obj.updateUser(obj1);
 			if(obj2){
 	    		HttpSession session=request.getSession();
-	    		request.setAttribute("msg", "User updated Succesfully");
 	    		session.setAttribute("user",obj1);
 	    		RequestDispatcher rd=request.getRequestDispatcher("UserViewProfile.jsp");
+	    		request.setAttribute("msg", "User updated Succesfully");
 	    		rd.forward(request, response);
 	    	}
 	    	else {

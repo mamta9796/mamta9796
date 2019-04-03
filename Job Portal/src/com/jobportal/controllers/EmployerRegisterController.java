@@ -58,11 +58,12 @@ public class EmployerRegisterController extends HttpServlet {
 			EmployerDao obj=new EmployerDaoImpl();
 			boolean obj2=obj.EmployerRegister(obj1);
 			if(obj2==false) {
-				out.println("Problem in Registering User. Try again");
+				RequestDispatcher rd=request.getRequestDispatcher("EmployerRegister.jsp");
+				request.setAttribute("msg", "Problem in registering");
 			}
 			else {
-				out.println("Registered Succesfully . Now u can login");
-				RequestDispatcher rd=request.getRequestDispatcher("EmployerRegister.jsp");
+				RequestDispatcher rd=request.getRequestDispatcher("login.jsp");
+				request.setAttribute("msg1", "Registered Succesfully . Now u can login");
 				rd.include(request, response);
 				}
 			}			

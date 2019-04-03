@@ -40,15 +40,19 @@ public class UserSignUpController extends HttpServlet {
 			UserDao obj=new UserDaoImpl();
 			boolean obj2=obj.register(obj1);
 			if(obj2==false) {
-				out.println("Problem in Registering User. Try again");
+				RequestDispatcher rd=request.getRequestDispatcher("UserSignUp.jsp");
+				request.setAttribute("msg", "Problem in registering");
 			}
 			else {
-				out.println("Registered Succesfully . Now u can login");
 				RequestDispatcher rd=request.getRequestDispatcher("login.jsp");
+				request.setAttribute("msg1", "Registered Succesfully . Now u can login");
 				rd.include(request, response);
 				}
 			}			
 }
+
+
+
 
 
 

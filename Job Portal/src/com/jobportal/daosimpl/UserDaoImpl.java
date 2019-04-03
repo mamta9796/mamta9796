@@ -84,10 +84,10 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
-	public boolean changePassword(String email, String newPassword) {
+	public boolean changePassword(String email, String newPassword,String ConfirmPassword) {
 		try {
 			Connection conn=ConnectionProvider.getConnection();
-			PreparedStatement ps=conn.prepareStatement("Update RegisterTab set password=? where email=?");
+			PreparedStatement ps=conn.prepareStatement("Update Logintab set password=? where loginId=?");
 			ps.setString(1,newPassword);
 			ps.setString(2,email);
 			
@@ -95,6 +95,10 @@ public class UserDaoImpl implements UserDao {
 			if(i!=0){
 				return true;
 			
+			}
+			else
+			{ 
+				return false;
 			}
 			}
 			catch(Exception e){

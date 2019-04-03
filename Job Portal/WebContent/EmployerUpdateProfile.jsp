@@ -1,4 +1,4 @@
-<jsp:include page="UserHeader.jsp"/>
+<jsp:include page="EmployerHeader.jsp"/>
 
 <br/>
 <!-- Content -->
@@ -64,7 +64,7 @@
   <div class="form-group">
     <label class="control-label col-sm-2" for="city">City</label>
     <div class="col-sm-10">
-    <input type="text" class="form-control"  name="email" value="${sessionScope.employer.city}">
+    <input type="text" class="form-control"  name="city" value="${sessionScope.employer.city}">
     </div>
   </div>
  

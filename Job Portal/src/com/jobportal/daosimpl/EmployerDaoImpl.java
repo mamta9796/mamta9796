@@ -13,6 +13,7 @@ public class EmployerDaoImpl implements EmployerDao {
 
 	public boolean EmployerRegister(Employer empobj) {
 		try {
+	
 			Connection conn=ConnectionProvider.getConnection();
 			PreparedStatement ps=conn.prepareStatement("insert into Registertab1 values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 			ps.setString(1,empobj.getEmail());
@@ -81,10 +82,12 @@ public class EmployerDaoImpl implements EmployerDao {
 		}
 		return null;
 	}
-
 	@Override
 	public boolean updateEmployer(Employer empobj) {
 		try {
+			
+			System.out.println("I m here" +empobj);
+    		
 			Connection conn=ConnectionProvider.getConnection();
 			PreparedStatement ps=conn.prepareStatement("Update RegisterTab1 set Location=?,CompanyName=?,IndustryType=?,Type=?,EmployerName=?,Designation=?,Address=?,Country=?,State=?,City=?,Pincode=?,MobileNo=? where email=?");
 			ps.setString(13,empobj.getEmail());
@@ -113,12 +116,13 @@ public class EmployerDaoImpl implements EmployerDao {
 			}
 		return false;
 	}
+	
 
 	@Override
-	public boolean changePassword(String email, String newPassword) {
+	public boolean changePassword(String email, String newPassword,String ConfirmPassword) {
 		try {
 			Connection conn=ConnectionProvider.getConnection();
-			PreparedStatement ps=conn.prepareStatement("Update RegisterTab1 set password=? where email=?");
+			PreparedStatement ps=conn.prepareStatement("Update Logintab set password=? where loginId=?");
 			ps.setString(1,newPassword);
 			ps.setString(2,email);
 			
@@ -126,6 +130,10 @@ public class EmployerDaoImpl implements EmployerDao {
 			if(i!=0){
 				return true;
 			
+			}
+			else
+			{ 
+				return false;
 			}
 			}
 			catch(Exception e){

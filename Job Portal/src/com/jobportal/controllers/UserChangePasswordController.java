@@ -23,25 +23,28 @@ public class UserChangePasswordController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			response.setContentType("text/html");
-			PrintWriter out=response.getWriter();
 			String s1=request.getParameter("t1");
 			String s2=request.getParameter("t2");
+			
 			HttpSession session=request.getSession();
-			String str1=(String)session.getAttribute("email");
-											
+			User user=(User)session.getAttribute("user");
+	
+			if(s1.equals(s2)){
 			UserDao obj=new UserDaoImpl();
-			boolean obj2=obj.changePassword(str1,s2);
-			if(obj2){
-				request.setAttribute("msg", "Password Changed Succesfully");
+			boolean obj2=obj.changePassword(user.getEmail(),s1,s2);
+			if(obj2==true){
+				
 	    		RequestDispatcher rd=request.getRequestDispatcher("login.jsp");
+	    		request.setAttribute("msg1", "Password Changed Succesfully");
 	    		rd.forward(request, response);
 			}
 			else{
-				request.setAttribute("msg", "Problem in  Changing Password");
+				
 	    		RequestDispatcher rd=request.getRequestDispatcher("UserChangePassword.jsp");
+	    		request.setAttribute("msg", "Problem in  Changing Password");
 	    		rd.forward(request, response);
-	    	}	    	    	
+	    	}
+			}
 			}			
 }
 

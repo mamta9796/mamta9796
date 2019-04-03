@@ -1,26 +1,22 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <jsp:include page="Header.jsp"/>
 
-
-<div class="container">
-<%--
- <%
-	Object msg=request.getAttribute("errorMsg");
-   if(msg!=null){
-	   %>
-	   		<div class="alert alert-danger">
-	   			Email or Password is incorrect...
-	   		</div>
-	   <%
-   }
- %>	
-  --%>
-
 <c:if test="${not empty errorMsg}">
 	<div class="alert alert-danger">
 		${errorMsg}
 	</div>
-</c:if>  	
+</c:if> 
+
+<c:if test="${not empty msg}">
+	<div class="alert alert-danger">
+		${msg}
+	</div>
+</c:if> 	
+<c:if test="${not empty msg1}">
+	<div class="alert alert-success">
+		${msg1}
+	</div>
+</c:if>
 <!DOCTYPE html>
 <html>
 <head> <link rel="stylesheet" href="css//login.css"/> 
@@ -34,7 +30,7 @@
       <input type="text" placeholder="username" name="t1"/>
       <input type="password" placeholder="password" name="t2"/>
       
-      <div class="b2"><input type="submit" value="Login" class="btn btn-primary"></div>
+      <input type="submit" value="Login" class="btn btn-primary" id="b2">
       <p class="message">Not registered? <a href="SignUp.jsp">Create an account</a></p>
     </form>
   </div>

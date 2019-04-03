@@ -1,5 +1,11 @@
 <jsp:include page="UserHeader.jsp"/>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+<c:if test="${not empty msg}">
+	<div class="alert alert-danger">
+		${msg}
+	</div>
+</c:if> 
 
 <div class="container table-responsive">          
   <table class="table table-striped">

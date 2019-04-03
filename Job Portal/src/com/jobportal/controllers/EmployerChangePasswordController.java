@@ -17,6 +17,7 @@ import com.jobportal.daos.EmployerDao;
 import com.jobportal.daos.UserDao;
 import com.jobportal.daosimpl.EmployerDaoImpl;
 import com.jobportal.daosimpl.UserDaoImpl;
+import com.jobportal.models.Employer;
 import com.jobportal.models.User;
 
 
@@ -30,18 +31,20 @@ public class EmployerChangePasswordController extends HttpServlet {
 			String s1=request.getParameter("t1");
 			String s2=request.getParameter("t2");
 			HttpSession session=request.getSession();
-			String str1=(String)session.getAttribute("email");
+			Employer emp=(Employer)session.getAttribute("employer");
 											
 			EmployerDao obj=new EmployerDaoImpl();
-			boolean obj2=obj.changePassword(str1,s2);
+			boolean obj2=obj.changePassword(emp.getEmail(),s1,s2);
 			if(obj2){
-				request.setAttribute("msg", "Password Changed Succesfully");
+				
 	    		RequestDispatcher rd=request.getRequestDispatcher("login.jsp");
+	    		request.setAttribute("msg1", "Password Changed Succesfully");
 	    		rd.forward(request, response);
 			}
 			else{
-				request.setAttribute("msg", "Problem in  Changing Password");
+				
 	    		RequestDispatcher rd=request.getRequestDispatcher("EmployerChangePassword.jsp");
+	    		request.setAttribute("msg", "Problem in  Changing Password");
 	    		rd.forward(request, response);
 	    	}	    	    	
 			}			

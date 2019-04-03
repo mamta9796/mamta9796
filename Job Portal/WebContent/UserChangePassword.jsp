@@ -1,18 +1,23 @@
 <jsp:include page="UserHeader.jsp"/>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+<c:if test="${not empty msg}">
+	<div class="alert alert-danger">
+		${msg}
+	</div>
+</c:if> 
 <div align="center">
 		<form action="UserChangePassword" method="post">
 			<table>
 			<tr>
-					<td>Old Password : </td>
-					<td><input type="text" name="t1" placeholder="Enter Old Password" required> </td>
-				</tr><br><br>
-			    	<tr>
 					<td>New Password : </td>
-					<td><input type="text" name="t2" placeholder="Enter New Password" required> </td>
+					<td><input type="text" name="t1" placeholder="Enter New Password" required> </td>
+				</tr>
+				<tr>
+				<td>Confirm Password : </td>
+					<td><input type="text" name="t2" placeholder="Enter Confirm Password" required> </td>
 				</tr>
 					<tr>
-					<td></td>
 					<td>
 						<input type="submit" value="Submit"/>
 					</td>

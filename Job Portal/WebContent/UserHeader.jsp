@@ -57,7 +57,7 @@
           <li><a href="UserViewProfile.jsp">View Profile</a></li>
           <li><a href="UserUpdateProfile.jsp">Update Profile</a></li>
           <li><a href="UserChangePassword.jsp">Change Password</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+          <li><a href="homepage.jsp"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
         </ul>
       </li>      
     </ul>                     

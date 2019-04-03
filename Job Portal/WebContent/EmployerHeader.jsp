@@ -52,12 +52,13 @@
                                 </ul>
 				</li>
 		<ul class="nav navbar-nav navbar-right">
-    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style=margin-left:400px>Welcome : ${sessionScope.employer.employerName}<span class="caret"></span></a>
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style=margin-left:400px>
+    Welcome : ${sessionScope.employer.employerName}<span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="EmployerViewProfile.jsp">View Profile</a></li>
           <li><a href="EmployerUpdateProfile.jsp">Update Profile</a></li>
           <li><a href="EmployerChangePassword.jsp">Change Password</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+          <li><a href="homepage.jsp"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
         </ul>
       </li>      
     </ul>                     

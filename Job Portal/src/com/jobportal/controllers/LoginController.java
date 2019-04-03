@@ -57,9 +57,10 @@ public class LoginController extends HttpServlet {
 					
                 	 EmployerDao obj1=new EmployerDaoImpl();
 					Employer empObj=obj1.getEmployer(s1);		
-					
+															
 					HttpSession session=request.getSession();
 					session.setAttribute("employer",empObj);
+					
 					RequestDispatcher rd=request.getRequestDispatcher("EmployerHeader.jsp");
 					rd.forward(request, response);	
 				}
