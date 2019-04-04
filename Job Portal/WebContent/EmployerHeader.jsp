@@ -36,12 +36,13 @@
 				</ul>
 				</li>
                                  <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Career Info
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Job 
 				<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-				<li><a href="#">Interview Preparation </a></li>
-				<li><a href="#">Resume article</a></li>
-                                <li><a href="#">Top companies</a></li>
+				<li><a href="addjob.jsp">Add Job</li>
+				<li><a href="DeleteJob.jsp">Delete Job</a></li>
+                                <li><a href="UpdateJob.jsp">Update Job</a></li>
+                                <li><a href="ViewJob.jsp">View Job</a></li>
                               	</ul>
 				</li>
                                   <li class="dropdown">

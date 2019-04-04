@@ -60,7 +60,6 @@ public class EmployerUpdateController extends HttpServlet {
 			EmployerDao obj=new EmployerDaoImpl();
 			boolean obj2=obj.updateEmployer(obj1);
 			if(obj2==true){
-				System.out.println("I m here");
 	    		HttpSession session=request.getSession();
 	    		request.setAttribute("msg", "Employer updated Succesfully");
 	    		session.setAttribute("employer",obj1);
@@ -68,8 +67,7 @@ public class EmployerUpdateController extends HttpServlet {
 	    		rd.forward(request, response);
 	    	}
 	    	else {
-	    		System.out.println("I m here i");
-	    		
+	    			    		
 	    		RequestDispatcher rd=request.getRequestDispatcher("EmployerUpdateProfile.jsp");
 	    		rd.forward(request, response);
 	    				
