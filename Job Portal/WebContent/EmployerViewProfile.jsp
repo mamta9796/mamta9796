@@ -1,8 +1,8 @@
 <jsp:include page="EmployerHeader.jsp"/>
 
-
+<body style="background-color:orange;color:blue">
 <div class="container table-responsive">          
-  <table class="table table-striped">
+  <table class="table table-hover">
       <tr>
       	<td>Location </td>
       	<td>${sessionScope.employer.loc}</td>
@@ -57,6 +57,7 @@
       </tr>
   </table>
   </div>
+  </body>
   
   <br/><br/><br/>
 <div style="margin-top:260px">

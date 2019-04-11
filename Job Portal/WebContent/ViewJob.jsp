@@ -16,7 +16,7 @@
 		<c:otherwise>
 			<table class="table table-hover">
 				<tr>
-					<th>Job Id</th>
+					<!--<th>Job Id</th>-->
 					<th>Job Title</th>
 					<th>Job Description</th>
 					<th>Qualification</th>
@@ -29,7 +29,7 @@
 				</tr>
 				<c:forEach items="${jList}" var="jobObj">
 					<tr>
-						<td>${jobObj.jobId}</td>
+						<%--<td>${jobObj.jobId}</td>--%>
 						<td>${jobObj.jobTitle}</td>
 						<td>${jobObj.desc}</td>
 						<td>${jobObj.qualification}</td>
@@ -39,10 +39,10 @@
 						<td>${jobObj.vacancy}</td>
 						<td>${jobObj.employerId}</td>
 						<td>
-							<span class="glyphicon glyphicon-trash"></span><a href="#">Delete</a>
+							<a href="deleteJob?jId=${jobObj.jobId}"><span class="glyphicon glyphicon-trash"></span></a>
 						</td>
 						<td>
-							<span class="glyphicon glyphicon-pencil"></span><a href="#">Update</a>
+							<a href="updateJob?jId=${jobObj.jobId}"><span class="glyphicon glyphicon-pencil"></span></a>
 		        		</td>
 					</tr>
 				</c:forEach>
@@ -52,5 +52,15 @@
  </div>
  
 <div style="margin-top:370px">
+
+
 <jsp:include page="Footer.jsp"/>
 </div>	
+
+
+
+
+
+
+
+

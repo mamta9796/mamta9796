@@ -66,8 +66,7 @@ public class Job {
 	public void setEmployerId(String employerId) {
 		this.employerId = employerId;
 	}
-	
-		 	
+ 	
 }
 
 

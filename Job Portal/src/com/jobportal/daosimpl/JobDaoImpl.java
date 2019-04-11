@@ -24,8 +24,8 @@ public class JobDaoImpl implements JobDao {
 			ps.setString(3,jobObj.getQualification());
 			ps.setString(5,jobObj.getCompanyName());
 			ps.setString(6,jobObj.getLocation());
-			ps.setInt(7,jobObj.getVacancy());
-			ps.setString(8,jobObj.getEmployerId());
+			ps.setInt(8,jobObj.getVacancy());
+			ps.setString(7,jobObj.getEmployerId());
 			
 			/*Converting java.util.Date into java.sql.Date*/
 			Date pdate=jobObj.getPostedOn();
@@ -63,21 +63,16 @@ public class JobDaoImpl implements JobDao {
 	public boolean updateJob(Job jobObj) {
 		try {
 			Connection conn=ConnectionProvider.getConnection();
-			PreparedStatement ps=conn.prepareStatement("update JobTab set jobtitle=?,description=?,qualification=?,postedOn=?,companyname=?,locations=?,vacancy=?,email=? where jobid=?");
+			PreparedStatement ps=conn.prepareStatement("update JobTab set jobtitle=?,description=?,qualification=?,companyname=?,locations=?,vacancy=?,email=? where jobid=?");
 			ps.setString(1,jobObj.getJobTitle());
 			ps.setString(2,jobObj.getDesc());
 			ps.setString(3,jobObj.getQualification());
-			ps.setString(5,jobObj.getCompanyName());
-			ps.setString(6,jobObj.getLocation());
-			ps.setInt(7,jobObj.getVacancy());
-			ps.setString(8,jobObj.getEmployerId());
-			ps.setInt(9,jobObj.getJobId());
+			ps.setString(4,jobObj.getCompanyName());
+			ps.setString(5,jobObj.getLocation());
+			ps.setInt(6,jobObj.getVacancy());
+			ps.setString(7,jobObj.getEmployerId());
+			ps.setInt(8,jobObj.getJobId());
 			
-			/*Converting java.util.Date into java.sql.Date*/
-			Date pdate=jobObj.getPostedOn();
-			long l=pdate.getTime();
-			java.sql.Date dob=new java.sql.Date(l);
-			ps.setDate(4, dob);
 			int i=ps.executeUpdate();
 			if(i!=0)return true;
 			}
@@ -103,8 +98,8 @@ public class JobDaoImpl implements JobDao {
 				obj.setPostedOn(rs.getDate(5));
 				obj.setCompanyName(rs.getString(6));
 				obj.setLocation(rs.getString(7));
-				obj.setVacancy(rs.getInt(8));
-				obj.setEmployerId(rs.getString(9));			
+				obj.setVacancy(rs.getInt(9));
+				obj.setEmployerId(rs.getString(8));			
 				return obj;
 			}
 			}
@@ -130,8 +125,8 @@ public class JobDaoImpl implements JobDao {
 				obj.setPostedOn(rs.getDate(5));
 				obj.setCompanyName(rs.getString(6));
 				obj.setLocation(rs.getString(7));
-				obj.setVacancy(rs.getInt(8));
-				obj.setEmployerId(rs.getString(9));			
+				obj.setVacancy(rs.getInt(9));
+				obj.setEmployerId(rs.getString(8));			
 				
 				job.add(obj);
 				

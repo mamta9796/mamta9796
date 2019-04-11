@@ -44,12 +44,12 @@ public class AddJob extends HttpServlet {
 		//String s9=request.getParameter("email");
 		HttpSession session=request.getSession();
 		Employer emp=(Employer)session.getAttribute("employer");
-		
+		System.out.println("Emp = "+emp);
 	    String s9=emp.getEmail();
 	  
 			
 		
-		Job jobObj=new Job();
+		Job jobObj=new Job();	
 		jobObj.setJobTitle(s1);
 		jobObj.setDesc(s2);
 		jobObj.setQualification(s3);
@@ -75,6 +75,5 @@ public class AddJob extends HttpServlet {
 			
 		}
 		
-	}
-	}
+	}	}
 

@@ -6,9 +6,10 @@
 		${msg}
 	</div>
 </c:if> 
+<body style="background-color:skyblue;color:blue">
 
 <div class="container table-responsive">          
-  <table class="table table-striped">
+  <table class="table table-hover">
       <tr>
       	<td>Name </td>
       	<td>${sessionScope.user.name}</td>
@@ -27,6 +28,7 @@
       </tr>
   </table>
   </div>
+  </body>
   
   <br/><br/><br/>
 <div style="margin-top:260px">

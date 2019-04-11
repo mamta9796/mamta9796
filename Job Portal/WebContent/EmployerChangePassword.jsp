@@ -6,6 +6,7 @@
 		${msg}
 	</div>
 </c:if> 
+<body style="background-color:orange;color:blue">
 <div align="center">
 		<form action="EmployerChangePassword" method="post">
 			<table>
@@ -28,9 +29,10 @@
 			</table>
 		</form>
 	</div>  
+	</body>
 	
 	<br/><br/><br/>
-<div style="margin-top:320px">
+<div style="margin-top:350px">
 <jsp:include page="Footer.jsp"/>
 </div>	
 	

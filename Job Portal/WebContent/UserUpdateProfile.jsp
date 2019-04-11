@@ -2,6 +2,7 @@
 
 <br/>
 <!-- Content -->
+<body style="background-color:skyblue;color:blue">
 <div class="container">
 <form class="form-horizontal" action="UpdateUser" method="post">
     
@@ -38,6 +39,7 @@
 </form>
 
  </div>
+ </body>
  
 
 <br/><br/><br/>

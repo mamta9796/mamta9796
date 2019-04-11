@@ -50,7 +50,7 @@ public class LoginController extends HttpServlet {
 					
 					HttpSession session=request.getSession();
 					session.setAttribute("user",userObj);
-					RequestDispatcher rd=request.getRequestDispatcher("UserHeader.jsp");
+					RequestDispatcher rd=request.getRequestDispatcher("USER.jsp");
 					rd.forward(request, response);	
 				}
                  else if(role.equals("Employer")){		
@@ -61,7 +61,7 @@ public class LoginController extends HttpServlet {
 					HttpSession session=request.getSession();
 					session.setAttribute("employer",empObj);
 					
-					RequestDispatcher rd=request.getRequestDispatcher("EmployerHeader.jsp");
+					RequestDispatcher rd=request.getRequestDispatcher("EMPLOYER.jsp");
 					rd.forward(request, response);	
 				}
 				

@@ -40,9 +40,7 @@
 				<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
 				<li><a href="addjob.jsp">Add Job</li>
-				<li><a href="DeleteJob.jsp">Delete Job</a></li>
-                                <li><a href="UpdateJob.jsp">Update Job</a></li>
-                                <li><a href="ViewJob.jsp">View Job</a></li>
+			     <li><a href="viewjob">View Job</a></li>
                               	</ul>
 				</li>
                                   <li class="dropdown">
@@ -65,6 +63,8 @@
     </ul>                     
 		</div>
    </nav>
+   
+  
     
 
   

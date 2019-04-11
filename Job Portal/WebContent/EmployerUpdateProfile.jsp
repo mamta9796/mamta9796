@@ -2,6 +2,7 @@
 
 <br/>
 <!-- Content -->
+<body style="background-color:orange;color:blue">
 <div class="container">
 <form class="form-horizontal" action="UpdateEmployer" method="post">
     
@@ -94,6 +95,7 @@
 </form>
 
  </div>
+ </body>
  
 
 <br/><br/><br/>
