@@ -9,5 +9,5 @@ public interface JobDao {
 	public boolean deleteJob(int jobId);
 	public boolean updateJob(Job jobObj);
 	public Job getJobById(int jobId);
-	public List<Job> getAllJob();
+	public List<Job> getAllJob(String recruiterEmail);
 }

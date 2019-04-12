@@ -42,6 +42,7 @@ public class AddJob extends HttpServlet {
 		
 		
 		//String s9=request.getParameter("email");
+		
 		HttpSession session=request.getSession();
 		Employer emp=(Employer)session.getAttribute("employer");
 		System.out.println("Emp = "+emp);
@@ -63,7 +64,7 @@ public class AddJob extends HttpServlet {
 		JobDao daoObj=new JobDaoImpl();
 		boolean r=daoObj.addJob(jobObj);
 		if(r){
-			List<Job> jobsList=daoObj.getAllJob();
+			List<Job> jobsList=daoObj.getAllJob(s9);
 			
 			request.setAttribute("jList",jobsList);
 			request.setAttribute("msg","Job Added Succesfully");

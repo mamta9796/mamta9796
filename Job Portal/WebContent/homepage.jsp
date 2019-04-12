@@ -99,6 +99,7 @@
                                 <li><a href="#">Jobs by Courses</a></li>
                                 <li><a href="#">Jobs by Education</a></li>
                                 <li><a href="#">Jobs by Designation</a></li>
+                                 <li><a href="ViewJobToUser">View All Jobs</a></li>
 				</ul>
 				</li>
                                  <li class="dropdown">

@@ -1,6 +1,7 @@
 <jsp:include page="EmployerHeader.jsp"/>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+<body style="background-color:orange;color:blue">
 <div class="container">
 <form class="form-horizontal" action="updateJobProcess"  method="post">
 <div class="form-group">
@@ -45,12 +46,14 @@
     <input type="text" class="form-control"  name="vacancy" value="${requestScope.jobObj.vacancy}">
     </div>
   </div>
+  
       
   
     <button type="submit" class="btn btn-default">Update Job</button>
 </form>
 
  </div>
+ </body>
 
 <div style="margin-top:320px">
 <jsp:include page="Footer.jsp"/>

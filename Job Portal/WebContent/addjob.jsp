@@ -1,6 +1,7 @@
 <jsp:include page="EmployerHeader.jsp"/>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+<body style="background-color:orange;color:blue">
 <div class="container">
 <form class="form-horizontal" action="addjob" method="post">
   <div class="form-group">
@@ -45,6 +46,7 @@
 </form>
 
  </div>
+ </body>
 
 <div style="margin-top:320px">
 <jsp:include page="Footer.jsp"/>

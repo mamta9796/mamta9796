@@ -110,11 +110,22 @@ public class JobDaoImpl implements JobDao {
 	}
 
 	@Override
-	public List<Job> getAllJob() {
+	public List<Job> getAllJob(String recruiterEmail) {
 		List<Job> job=new ArrayList<>();
 		try {
 			Connection conn=ConnectionProvider.getConnection();
-			PreparedStatement ps=conn.prepareStatement("select * from JobTab");
+			PreparedStatement ps=null;
+			
+			
+			if(recruiterEmail.equals("NotApplicable")){
+			ps=conn.prepareStatement("select * from JobTab");
+			
+			}
+			else {
+				ps=conn.prepareStatement("select * from JobTab where email=?");
+				ps.setString(1,recruiterEmail);
+			}
+			
 			ResultSet rs=ps.executeQuery();
 			while(rs.next()){
 				Job obj=new Job();

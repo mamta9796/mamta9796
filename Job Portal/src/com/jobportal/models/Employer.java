@@ -101,17 +101,5 @@ public class Employer {
 	public void setMobileNo(Long mobileNo) {
 		this.mobileNo = mobileNo;
 	}
-	@Override
-	public String toString() {
-		return "Employer [email=" + email + ", password=" + password + ", loc="
-				+ loc + ", companyName=" + companyName + ", industryType="
-				+ industryType + ", type=" + type + ", employerName="
-				+ employerName + ", des=" + des + ", address=" + address
-				+ ", country=" + country + ", state=" + state + ", city="
-				+ city + ", pinCode=" + pinCode + ", mobileNo=" + mobileNo
-				+ "]";
-	}
- 
-	
 	
 }

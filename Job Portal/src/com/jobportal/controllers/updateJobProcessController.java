@@ -31,6 +31,7 @@ public class updateJobProcessController extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
 		
+		
 	    int id=Integer.parseInt(request.getParameter("jobid"));
 		String s1=request.getParameter("jobtitle");
 		String s2=request.getParameter("desc");
@@ -40,7 +41,6 @@ public class updateJobProcessController extends HttpServlet {
 		String s6=request.getParameter("vacancy");	
 		HttpSession session=request.getSession();
 		Employer emp=(Employer)session.getAttribute("employer");
-		System.out.println("Emp = "+emp);
 	    String s7=emp.getEmail();
 
 		
@@ -55,13 +55,12 @@ public class updateJobProcessController extends HttpServlet {
 		jobObj.setEmployerId(s7);
 	
 		
-		System.out.println("Job Object : "+jobObj);
-		
+				
 		JobDao daoObj=new JobDaoImpl();
 		boolean r=daoObj.updateJob(jobObj);
-		System.out.println("Result : "+r);
+		
 		if(r){
-			List<Job> jobsList=daoObj.getAllJob();
+			List<Job> jobsList=daoObj.getAllJob(s7);
 			
 			request.setAttribute("jList",jobsList);
 			request.setAttribute("msg","Job Updated Succesfully");

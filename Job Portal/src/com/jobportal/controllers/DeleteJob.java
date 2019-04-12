@@ -32,6 +32,12 @@ public class DeleteJob extends HttpServlet {
 		PrintWriter out=response.getWriter();
 		int id=Integer.parseInt(request.getParameter("jId"));
 		
+		HttpSession session=request.getSession();
+		Employer emp=(Employer)session.getAttribute("employer");
+		System.out.println("Emp = "+emp);
+	    String s9=emp.getEmail();
+	  
+		
 		JobDao jDao=new JobDaoImpl();                            
 		boolean r=jDao.deleteJob(id);                              
 		if(r==true){
@@ -40,7 +46,7 @@ public class DeleteJob extends HttpServlet {
 		else {
 			request.setAttribute("msg1","Problem in Deleting Job . Try again");
 		}
-		request.setAttribute("jList",jDao.getAllJob());
+		request.setAttribute("jList",jDao.getAllJob(s9));
 		RequestDispatcher rd=request.getRequestDispatcher("ViewJob.jsp");
 		rd.forward(request, response);
 		
