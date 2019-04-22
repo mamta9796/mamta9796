@@ -17,8 +17,7 @@
       <input type="text" required  placeholder="Enter your Full Name" name="name" />
 	  <label>Mobile Number</label>
 	  <input type="tel" id="phone" name="phone" placeholder="1234567890"
-       pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
-       required>
+       pattern="[0-9]{10}" maxlength="10" required>
 	   <label>Email</label><br>
 	   <input type="email"  required  placeholder="Enter email" name="email" >
 	   

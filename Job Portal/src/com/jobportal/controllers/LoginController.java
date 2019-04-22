@@ -12,12 +12,15 @@ import javax.servlet.http.HttpSession;
 
 import com.jobportal.daos.EmployerDao;
 import com.jobportal.daos.LoginDao;
+import com.jobportal.daos.ResumeUploadDao;
 import com.jobportal.daos.UserDao;
 import com.jobportal.daosimpl.EmployerDaoImpl;
 import com.jobportal.daosimpl.LoginDaoImpl;
+import com.jobportal.daosimpl.ResumeUploadDaoImpl;
 import com.jobportal.daosimpl.UserDaoImpl;
 import com.jobportal.models.Employer;
 import com.jobportal.models.Login;
+import com.jobportal.models.ResumeUpload;
 import com.jobportal.models.User;
 
 
@@ -48,9 +51,14 @@ public class LoginController extends HttpServlet {
 					UserDao userDao=new UserDaoImpl();
 					User userObj=userDao.getUser(s1);		
 					
+					ResumeUploadDao obj1=new ResumeUploadDaoImpl();
+					ResumeUpload res=obj1.getResume(s1);
+					
 					HttpSession session=request.getSession();
 					session.setAttribute("user",userObj);
-					RequestDispatcher rd=request.getRequestDispatcher("USER.jsp");
+					session.setAttribute("res1",res);
+					
+					RequestDispatcher rd=request.getRequestDispatcher("UploadUserResume.jsp");
 					rd.forward(request, response);	
 				}
                  else if(role.equals("Employer")){		

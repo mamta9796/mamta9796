@@ -32,7 +32,7 @@ public class updateJobProcessController extends HttpServlet {
 		PrintWriter out=response.getWriter();
 		
 		
-	    int id=Integer.parseInt(request.getParameter("jobid"));
+	    int id=Integer.parseInt(request.getParameter("jobid")); 
 		String s1=request.getParameter("jobtitle");
 		String s2=request.getParameter("desc");
 		String s3=request.getParameter("qualification");

@@ -1,4 +1,4 @@
-<jsp:include page="UserHeader.jsp"/>
+<jsp:include page="Header.jsp"/>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <body style="background-image:url('images//m5.jpg') ;color:orange; background-repeat:no-repeat">

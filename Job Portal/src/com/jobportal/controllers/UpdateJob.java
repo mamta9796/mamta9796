@@ -41,6 +41,5 @@ public class UpdateJob extends HttpServlet {
 		rd.forward(request, response);
 		
 		}
-
 	}                                                                   
 

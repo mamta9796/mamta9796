@@ -34,7 +34,6 @@ public class DeleteJob extends HttpServlet {
 		
 		HttpSession session=request.getSession();
 		Employer emp=(Employer)session.getAttribute("employer");
-		System.out.println("Emp = "+emp);
 	    String s9=emp.getEmail();
 	  
 		

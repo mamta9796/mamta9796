@@ -21,7 +21,7 @@
       <a class="navbar-brand" href="#">Job Portal</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li><a href="homepage.jsp">Home</a></li>
       <li><a href="AboutUs.jsp">About Us </a></li>
       <li><a href="contact.jsp">Contact Us </a></li>
        <li class="dropdown">

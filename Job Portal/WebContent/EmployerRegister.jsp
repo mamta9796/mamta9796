@@ -61,7 +61,7 @@
 	 </div>
 	 </div>
 	 </div>
-	 	  <input type="tel" id="phone" name="phone" placeholder="Mobile number"  required>
+	 	  <input type="tel" id="phone" name="phone" placeholder="Mobile number" pattern="[0-9]{10}" maxlength="10" required>
 
 
 

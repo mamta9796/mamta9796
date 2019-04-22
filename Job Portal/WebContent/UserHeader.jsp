@@ -55,6 +55,7 @@
     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style=margin-left:400px>Welcome : ${sessionScope.user.name}<span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="UserViewProfile.jsp">View Profile</a></li>
+          <li><a href="viewResume">View Resume</a></li>
           <li><a href="UserUpdateProfile.jsp">Update Profile</a></li>
           <li><a href="UserChangePassword.jsp">Change Password</a></li>
           <li><a href="homepage.jsp"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
