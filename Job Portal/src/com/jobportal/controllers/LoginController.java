@@ -51,14 +51,11 @@ public class LoginController extends HttpServlet {
 					UserDao userDao=new UserDaoImpl();
 					User userObj=userDao.getUser(s1);		
 					
-					ResumeUploadDao obj1=new ResumeUploadDaoImpl();
-					ResumeUpload res=obj1.getResume(s1);
 					
 					HttpSession session=request.getSession();
 					session.setAttribute("user",userObj);
-					session.setAttribute("res1",res);
 					
-					RequestDispatcher rd=request.getRequestDispatcher("UploadUserResume.jsp");
+					RequestDispatcher rd=request.getRequestDispatcher("UserEducationalDetail.jsp");
 					rd.forward(request, response);	
 				}
                  else if(role.equals("Employer")){		

@@ -21,7 +21,7 @@
       <a class="navbar-brand" href="#">Job Portal</a>
     </div>
     <ul class="nav navbar-nav" >
-      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Home</a></li>
       <li><a href="AboutUs.jsp">About Us </a></li>
       <li><a href="contact.jsp">Contact Us </a></li>
        <li class="dropdown">
@@ -56,6 +56,7 @@
         <ul class="dropdown-menu">
           <li><a href="UserViewProfile.jsp">View Profile</a></li>
           <li><a href="viewResume">View Resume</a></li>
+           <li><a href="ViewEducation">View Educational Detail</a></li>
           <li><a href="UserUpdateProfile.jsp">Update Profile</a></li>
           <li><a href="UserChangePassword.jsp">Change Password</a></li>
           <li><a href="homepage.jsp"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>

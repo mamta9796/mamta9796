@@ -1,60 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<jsp:include page="UserHeader.jsp"/>
+</html>
 <head>
- <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Job Portal</title>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
- <link rel="stylesheet" href="css//educational.css"/> 
-
-
-<style >
-
-
-
-body {
- background-image: url("");
- background-repeat: no-repeat;
- background-position: center;
- background-size: cover; 
-    
-
-}
-*[role="form"] {
-    max-width: 580px;
-    padding: 15px;
-    margin: 0 auto;
-    background-color: #eee;
-    border-radius: 0.3em;
-}
-
-*[role="form"] h2 {
-    margin-left: 5em;
-    margin-bottom: 1em;
-}
-
-
-
-</style>
+ <link rel="stylesheet" href="css//AdditionalUserDetail.css"/> 
 </head>
 <body  Style="background-image:url('images//H.jpeg')">
-
-
-
-
-
-
 <div class="container">
-            <form class="form-horizontal" role="form" >
-                <h2>Educational details</h2>
-				
-				
-				
-				
-				
+            <form class="form-horizontal" role="form" action="educationDetail" >
+                <h2>Educational details</h2>			
 				
 				 <h3   style="margin-left: 5em; margin-bottom: 1em; color:blue;" >10th class:-</h3  >
 				
@@ -199,21 +151,12 @@ body {
                     </div>
                 </div>
                
-		  
-		  
-		  
-
-				
 				   <div class="form-group">
                     <label for="country" class="col-sm-3 control-label">Passing Year</label>
                     <div class="col-sm-9">
                         <select id="country" class="form-control" name="year">
 						    <option>select</option>
-							 <option>2023</option>
-                            <option>2022</option>
-                            <option>2021</option>
-                            <option>2020</option>
-                            <option>2019</option>
+							<option>2019</option>
                             <option>2018</option>
                             <option>2017</option>
                             <option>2016</option>
@@ -410,7 +353,7 @@ body {
                                 <label class="radio-inline"> 
 								
 								
-                                    <input type="radio"  class="form-check-input" id="fullRadio" value="Full time" name="opt">Full Time
+                                    <input type="radio"  class="form-check-input" id="fullRadio" value="Full time" name="opt1">Full Time
                                 </label>
                             </div>
 							
@@ -418,14 +361,14 @@ body {
                                  <label class="radio-inline">
 								
 								
-                                    <input type="radio"  class="form-check-input" id="partRadio" value="Part time" name="opt">Part Time
+                                    <input type="radio"  class="form-check-input" id="partRadio" value="Part time" name="opt1">Part Time
                                 </label>
                             </div>
                             <div class="col-sm-4">
                                 <label class="radio-inline">
 								
                            
-                               <input type="radio"  class="form-check-input" id="uncknownRadio" value="Correspondence" name="opt">Correspondence
+                               <input type="radio"  class="form-check-input" id="uncknownRadio" value="Correspondence" name="opt1">Correspondence
                                 </label>
                             </div>
 							
@@ -438,7 +381,7 @@ body {
 		          <div class="form-group">
                     <label for="firstName" class="col-sm-3 control-label"> Percentage</label>
                     <div class="col-sm-9">
-                        <input type="text" id="firstName" placeholder="Percentage" class="form-control" name="percentage1" autofocus>
+                        <input type="text" id="firstName" placeholder="Percentage" class="form-control" name="percentage1" >
                         
                     </div>
                 </div>
@@ -453,11 +396,7 @@ body {
                     <div class="col-sm-9">
                         <select id="country" class="form-control" name="year1">
 						    <option>select</option>
-							 <option>2023</option>
-                            <option>2022</option>
-                            <option>2021</option>
-                            <option>2020</option>
-                            <option>2019</option>
+						    <option>2019</option>
                             <option>2018</option>
                             <option>2017</option>
                             <option>2016</option>
@@ -631,17 +570,17 @@ body {
                         <div class="row">
                             <div class="col-sm-4">
                                 <label class="radio-inline">
-                                    <input type="radio" id="fullRadio" value="Full time" name="course type" name="opt2">Full Time
+                                    <input type="radio" id="fullRadio" value="Full time"  name="opt2">Full Time
                                 </label>
                             </div>
                             <div class="col-sm-4">
                                 <label class="radio-inline">
-                                    <input type="radio" id="partRadio" value="Part time" name="course type" name="opt2">Part Time
+                                    <input type="radio" id="partRadio" value="Part time" name="opt2">Part Time
                                 </label>
                             </div>
                             <div class="col-sm-4">
                                 <label class="radio-inline">
-                                    <input type="radio" id="correspondingRadio" value="Correspondence" name="course type" name="opt2">Correspondence
+                                    <input type="radio" id="correspondingRadio" value="Correspondence" name="opt2">Correspondence
                                 </label>
                             </div>
                         </div>
@@ -655,10 +594,6 @@ body {
                     <div class="col-sm-9">
                         <select id="country" class="form-control" name="year2">
 						    <option>select</option>
-                            <option>2023</option>
-                            <option>2022</option>
-                            <option>2021</option>
-                            <option>2020</option>
                             <option>2019</option>
                             <option>2018</option>
                             <option>2017</option>
@@ -871,11 +806,7 @@ body {
                     <div class="col-sm-9">
                         <select id="country" class="form-control" name="year3">
 						   <option>select</option>
-							 <option>2023</option>
-                            <option>2022</option>
-                            <option>2021</option>
-                            <option>2020</option>
-                            <option>2019</option>
+							<option>2019</option>
                             <option>2018</option>
                             <option>2017</option>
                             <option>2016</option>
@@ -946,55 +877,7 @@ body {
                            </select>
                     </div>
                 </div>
-				
-				 <h5   style="margin-left: 5em; margin-bottom: 1em;">     <a href="#"> + Add More Education</a></h5>
-				 
-				 <div class="form-group" >
-                    <label for="firstName" class="col-sm-3 control-label"> Diploma/Certificate</label>
-                    <div class="col-sm-9">
-                        <input type="text" id="firstName"  class="form-control" name="diploma1" autofocus>
-				  
-                    </div>
-                </div>
-            
-			 <div class="form-group" >
-                    <label for="firstName" class="col-sm-3 control-label"> Diploma/Certificate</label>
-                    <div class="col-sm-9">
-                        <input type="text" id="firstName"  class="form-control"   name="diploma2" autofocus>
-				   
-                    </div>
-                </div>
-            
-			
-				<div class="form-group" >
-                    <label for="firstName" class="col-sm-3 control-label"> Diploma/Certificate</label>
-                    <div class="col-sm-9">
-                        <input type="text" id="firstName"  class="form-control"  name="diploma3" autofocus>
-                        
-                    </div>
-                </div>
-            
-				
-				 
-				 
-				
-				 <div class="form-group" >
-                    <label for="firstName" class="col-sm-3 control-label"> Skills</label>
-                    <div class="col-sm-9">
-                        <input type="text" id="firstName" placeholder="Enter Your Area of Specialization" class="form-control"  name="skill" autofocus>
-                        
-                    </div>
-                </div>
-            
-				
-
-		
-
-
-			
-				
-				
-             <!-- /.form-group -->
+	
                 <div class="form-group">
                     <div class="col-sm-9 col-sm-offset-3">
                         <div class="checkbox">
@@ -1013,8 +896,10 @@ body {
         </div> 
 		</body>
 		</html>
-
-
-
-
-      </body></html>
+		
+  <br/><br/><br/>
+<div style="margin-top:260px">
+<jsp:include page="Footer.jsp"/>
+</div>			
+		
+    

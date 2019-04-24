@@ -28,14 +28,19 @@ public class ViewResumeController extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
 		HttpSession session=request.getSession();
-		ResumeUpload usr=(ResumeUpload)session.getAttribute("res1");
+		
+		User user=(User)session.getAttribute("user");
 				  
-		String s1=usr.getEmail();
+		String s1=user.getEmail();
+		
+		System.out.println(s1);
+	
 		ResumeUploadDao daoObj=new ResumeUploadDaoImpl();
 		ResumeUpload res1=daoObj.getResume(s1);
 		
-		request.setAttribute("resume1",res1);
-				
+		session.setAttribute("resume1",res1.getResume());
+		
+		
 		RequestDispatcher rd=request.getRequestDispatcher("ViewResume.jsp");
 		rd.forward(request, response);
 		

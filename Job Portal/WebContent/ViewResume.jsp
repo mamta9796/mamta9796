@@ -13,13 +13,13 @@
 	<h1>View Resume</h1>
 			<table class="table table-hover">				
 					<tr>						
-						<td><img src="images/${sessionScope.resume1.resume}"/></td>		
+						<td>
+						
+						<img src="images/${sessionScope.resume1}"/></td>		
 					</tr>
 				</table>
 	 </div>
 <div style="margin-top:470px">
-
-
 <jsp:include page="Footer.jsp"/>
 </div>	
 

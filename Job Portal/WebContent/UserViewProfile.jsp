@@ -1,4 +1,4 @@
-<jsp:include page="UserHeader.jsp"/>
+viewalljobtouser.jsp<jsp:include page="UserHeader.jsp"/>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <c:if test="${not empty msg}">

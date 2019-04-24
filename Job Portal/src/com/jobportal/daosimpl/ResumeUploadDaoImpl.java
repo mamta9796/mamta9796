@@ -37,9 +37,12 @@ public class ResumeUploadDaoImpl implements ResumeUploadDao {
 			ps.setString(1,email);
 			ResultSet rs=ps.executeQuery();
 			if(rs.next()){
+				
 				ResumeUpload robj=new ResumeUpload();
-				robj.setResume(rs.getString(1));
-				robj.setEmail(rs.getString(2));
+				robj.setResume(rs.getString(2));
+				robj.setEmail(rs.getString(3));
+				
+				System.out.println(robj.getResume()+" "+robj.getEmail());
 				
 				return robj;
 			}

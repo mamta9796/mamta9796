@@ -51,8 +51,8 @@ public class ResumeUploadController extends HttpServlet {
 		String serverLocation=session.getServletContext().getRealPath("/");
 		System.out.println(serverLocation);
 		
-		String filePath=serverLocation+"\\images";
-		System.out.println("filePath : "+filePath);
+		String filePath=serverLocation+"\\RESUME1";
+		System.out.println("filePath : "+filePath+".doc");
 		
 		File fileObj=new File(filePath);
 		if(!fileObj.exists()){
