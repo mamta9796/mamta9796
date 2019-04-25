@@ -61,7 +61,32 @@ public class LoginDaoImpl implements LoginDao {
 		return null;
 	}
 
+	@Override
+	public boolean changePassword(String email, String newPassword,String ConfirmPassword) {
+		try {
+			Connection conn=ConnectionProvider.getConnection();
+			PreparedStatement ps=conn.prepareStatement("Update Logintab set password=? where loginId=?");
+			ps.setString(1,newPassword);
+			ps.setString(2,email);
+			
+			int i=ps.executeUpdate();
+			if(i!=0){
+				return true;
+			
+			}
+			else
+			{ 
+				return false;
+			}
+			}
+			catch(Exception e){
+				e.printStackTrace();
+			}
+		return false;
 	}
+
+	
+}
 
 
 

@@ -1,6 +1,3 @@
-
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -105,77 +102,40 @@
         <ul class="dropdown-menu">
           <li><a href="viewEmployees">View All Employees</a></li>
           <li><a href="viewUser">View All User</a></li>
-           <li><a href="changeAdminPassword.jsp">Change Password</a></li>
+         <li><a href="changeAdminPassword.jsp">Change Password</a></li>
           <li><a href="homepage.jsp"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
         </ul>
       </li>      
     </ul>                     
-<div class="container" style="margin-top:80px;margin-left:10px">
 
-	<c:if test="${not empty msg}">
-		<div class="alert alert-success">
-			${msg}
-		</div>
-	</c:if>
-	<h1>List of Employer</h1>
-	<c:choose>
-		<c:when test="${eList.size() eq 0}">
-			No Employee Found...
-		</c:when>
-		<c:otherwise>
-			<table class="table table-hover" style="background-color:white">
-				<tr>
-					
-					<th>EMAIL</th>
-					<th>LOCATION</th>
-					<th>COMPANY NAME</th>
-					<th>INDUSTRY TYPE</th>
-					<th>TYPE</th>
-					<th>EMPLOYER NAME </th>
-					<th>DESIGNATION</th>
-					<th>ADDRESS</th>
-					<th>COUNTRY</th>
-					<th>STATE</th>
-					<th>CITY</th>
-					<th>PIN CODE</th>
-					<th>MOBILE NO</th>
-						
+<div align="center" style="margin-top:100px">
+		<form action="adminPassword" method="post">
+			<table>
+			<tr>		
+			    	<tr>
+					<td>New Password : </td>
+					<td><input type="text" name="t1" placeholder="Enter New Password" required> </td>
 				</tr>
-				<c:forEach items="${eList}" var="eObj">
-					<tr>						
-						<td>${eObj.email}</td>
-						<td>${eObj.loc}</td>
-						<td>${eObj.companyName}</td>
-						<td>${eObj.industryType}</td>
-						<td>${eObj.type}</td>
-						<td>${eObj.employerName}</td>
-						<td>${eObj.des}</td>
-						<td>${eObj.address}</td>
-						<td>${eObj.country}</td>
-						<td>${eObj.state}</td>
-						<td>${eObj.city}</td>
-						<td>${eObj.pinCode}</td>
-						<td>${eObj.mobileNo}</td>
-						<td>
-							<a href="deleteEmployee?eId=${eObj.email}"><span class="glyphicon glyphicon-trash"></span></a>
-						</td>
-					</tr>
-				</c:forEach>
+					<tr>
+				<td>Confirm Password : </td>
+					<td><input type="text" name="t2" placeholder="Enter Confirm Password" required> </td>
+				</tr>
+					<tr>
+					<td></td>
+					<td>
+						<input type="submit" value="Submit"/>
+					</td>
+				</tr>
 			</table>
-		</c:otherwise>
-	</c:choose>
- </div>
- </div>
- </body>
- 
-<div style="margin-top:300px">
+		</form>
+	</div>
+	</div>  
+	</body>
+	
+	<br/><br/><br/>
+<div style="margin-top:290px">
 <jsp:include page="Footer.jsp"/>
 </div>	
-
-
-
-
-
-
-
+	
+	
 

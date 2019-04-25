@@ -102,7 +102,7 @@
         <ul class="dropdown-menu">
           <li><a href="viewEmployees">View All Employees</a></li>
           <li><a href="viewUser">View All User</a></li>
-           
+             <li><a href="changeAdminPassword.jsp">Change Password</a></li>
           <li><a href="homepage.jsp"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
         </ul>
       </li>      
