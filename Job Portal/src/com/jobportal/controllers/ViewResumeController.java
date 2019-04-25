@@ -42,10 +42,8 @@ public class ViewResumeController extends HttpServlet {
 		
 		
 		RequestDispatcher rd=request.getRequestDispatcher("ViewResume.jsp");
-		rd.forward(request, response);
-		
-		
-		
+		rd.forward(request, response);                         
+				
 	}
 
 }

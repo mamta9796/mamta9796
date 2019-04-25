@@ -3,9 +3,12 @@ package com.jobportal.daosimpl;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.jobportal.daos.EmployerDao;
 import com.jobportal.models.Employer;
+import com.jobportal.models.Job;
 import com.jobportal.models.User;
 import com.jobportal.utility.ConnectionProvider;
 
@@ -142,5 +145,61 @@ public class EmployerDaoImpl implements EmployerDao {
 		return false;
 	}
 
+	@Override
+	public List<Employer> getAllEmployeeDetail(String Email) {
+		List<Employer> emp=new ArrayList<>();
+		try {
+			Connection conn=ConnectionProvider.getConnection();
+			PreparedStatement ps=null;
+			
+			if(Email.equals("not applicable")){
+			ps=conn.prepareStatement("select * from RegisterTab1");
+					
+			ResultSet rs=ps.executeQuery();
+			while(rs.next()){
+				Employer obj=new Employer();
+				obj.setEmail(rs.getString(1));
+				obj.setPassword(rs.getString(2));
+				obj.setLoc(rs.getString(3));
+				obj.setCompanyName(rs.getString(4));
+				obj.setIndustryType(rs.getString(5));
+				obj.setType(rs.getString(6));
+				obj.setEmployerName(rs.getString(7));
+				obj.setDes(rs.getString(8));
+				obj.setAddress(rs.getString(9));
+				obj.setCountry(rs.getString(10));
+				obj.setState(rs.getString(11));
+				obj.setCity(rs.getString(12));
+				obj.setPinCode(rs.getLong(13));
+				obj.setMobileNo(rs.getLong(14));
+				emp.add(obj);
+				
+			}
+			}}
+			catch(Exception e){
+				e.printStackTrace();
+			}
+		return emp;
+	}
+
+	@Override
+	public boolean deleteEmployee(String email) {
+		try {
+			Connection conn=ConnectionProvider.getConnection();
+			PreparedStatement ps=conn.prepareStatement("delete from Registertab1 where email=?");
+			ps.setString(1,email);
+			int i=ps.executeUpdate();
+			if(i!=0)
+		    ps=conn.prepareStatement("delete from logintab where loginid=?");
+			ps.setString(1,email);
+			ps.executeUpdate();
+				return true;
+			}
+			catch(Exception e){
+				e.printStackTrace();
+			}
+		return false;
+	}	
+	
 	
 }

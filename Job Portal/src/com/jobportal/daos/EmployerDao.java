@@ -1,6 +1,9 @@
 package com.jobportal.daos;
 
+import java.util.List;
+
 import com.jobportal.models.Employer;
+import com.jobportal.models.Job;
 import com.jobportal.models.User;
 
 
@@ -9,4 +12,6 @@ public interface EmployerDao {
 	public Employer getEmployer(String email);
 	public boolean updateEmployer(Employer empobj);
 	public boolean changePassword(String email,String newPassword,String ConfirmPassword);
+	public List<Employer> getAllEmployeeDetail(String Email);
+	public boolean deleteEmployee(String email);
 }

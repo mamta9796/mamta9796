@@ -42,8 +42,14 @@ public class LoginController extends HttpServlet {
 			}
 			else {
 				String role=obj.getRole();
-				if(role.equals("Admin")) {					
-					RequestDispatcher rd=request.getRequestDispatcher("AdminHome.jsp");
+				if(role.equals("Admin")) {	
+					LoginDao obj1=new LoginDaoImpl();
+					Login obj2=obj1.getDataById(s1);
+					
+					HttpSession session=request.getSession();
+					session.setAttribute("admin",obj2);
+					
+					RequestDispatcher rd=request.getRequestDispatcher("Admin1.jsp");
 					rd.forward(request, response);
 				}
 				else if(role.equals("User")){		

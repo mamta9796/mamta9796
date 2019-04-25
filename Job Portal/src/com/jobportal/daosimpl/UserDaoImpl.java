@@ -3,8 +3,11 @@ package com.jobportal.daosimpl;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.jobportal.daos.UserDao;
+import com.jobportal.models.Employer;
 import com.jobportal.models.User;
 import com.jobportal.utility.ConnectionProvider;
 
@@ -107,5 +110,51 @@ public class UserDaoImpl implements UserDao {
 		return false;
 	}
 
+	@Override
+	public List<User> getAllUserDetail(String Email) {
+		List<User> usr=new ArrayList<>();
+		try {
+			Connection conn=ConnectionProvider.getConnection();
+			PreparedStatement ps=null;
+			
+			if(Email.equals("not applicable")){
+			ps=conn.prepareStatement("select * from RegisterTab");
+					
+			ResultSet rs=ps.executeQuery();
+			while(rs.next()){
+				User obj=new User();
+				obj.setName(rs.getString(1));
+				obj.setEmail(rs.getString(2));
+				obj.setMobileNo(rs.getLong(3));
+				obj.setCurrentLoc(rs.getString(4));	
+				usr.add(obj);
+				
+			}
+			}}
+			catch(Exception e){
+				e.printStackTrace();
+			}
+		return usr;
+	}
+
+	@Override
+	public boolean deleteUser(String email) {
+		try {
+			Connection conn=ConnectionProvider.getConnection();
+			PreparedStatement ps=conn.prepareStatement("delete from Registertab where email=?");
+			ps.setString(1,email);
+			int i=ps.executeUpdate();
+			if(i!=0)
+		    ps=conn.prepareStatement("delete from logintab where loginid=?");
+			ps.setString(1,email);
+			ps.executeUpdate();
+				return true;
+			}
+			catch(Exception e){
+				e.printStackTrace();
+			}
+		return false;
+	}
+	
 	
 }
