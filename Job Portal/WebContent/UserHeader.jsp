@@ -10,8 +10,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -21,26 +19,9 @@
       <li><a href="#">Home</a></li>
       <li><a href="AboutUs.jsp">About Us </a></li>
       <li><a href="contact.jsp">Contact Us </a></li>
-       <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Search jobs
-				<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-				<li><a href="#">Jobs in top cities </a></li>
-				<li><a href="#">Jobs by Skills</a></li>
-                                <li><a href="#">Jobs by Courses</a></li>
-                                <li><a href="#">Jobs by Education</a></li>
-                                <li><a href="#">Jobs by Designation</a></li>
-				</ul>
-				</li>
-                                 <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Career Info
-				<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-				<li><a href="#">Interview Preparation </a></li>
-				<li><a href="#">Resume article</a></li>
-                                <li><a href="#">Top companies</a></li>
-                              	</ul>
-				</li>
+      <li><a href="UserEducationalDetail.jsp">Add Education Detail </a></li>
+      <li><a href="UploadUserResume.jsp">Upload Resume </a></li>
+                       
                                   <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Resume Article
 				<span class="caret"></span></a>

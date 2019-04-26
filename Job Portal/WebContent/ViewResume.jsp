@@ -14,7 +14,7 @@
 			<table class="table table-hover">				
 					<tr>						
 						<td>
-						
+						${sessionScope.resume1}
 						<img src="images/${sessionScope.resume1}"/></td>		
 					</tr>
 				</table>

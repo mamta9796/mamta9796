@@ -24,17 +24,7 @@
       <li class="active"><a href="#">Home</a></li>
       <li><a href="AboutUs.jsp">About Us </a></li>
       <li><a href="contact.jsp">Contact Us </a></li>
-       <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Search jobs
-				<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-				<li><a href="#">Jobs in top cities </a></li>
-				<li><a href="#">Jobs by Skills</a></li>
-                                <li><a href="#">Jobs by Courses</a></li>
-                                <li><a href="#">Jobs by Education</a></li>
-                                <li><a href="#">Jobs by Designation</a></li>
-				</ul>
-				</li>
+       
                                  <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Job 
 				<span class="caret"></span></a>

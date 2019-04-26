@@ -132,10 +132,9 @@ body {
 	
    <div class="img2">
                 <ul id="menu">
-				<li class="active"><a href="">Home</a></li>
+				<li class="active"><a href="homepage.jsp">Home</a></li>
 				<li><a href="AboutUs.jsp">About Us</a></li>
-                 <li><a href="#">Hiring plans</a></li>
-                 <li><a href="homepage.jsp">job seekers?</a></li>		                               
+                 	                               
 		</ul></div>
 		<div class="contect" style="margin-left:900px; margin-top:3px;position:absolute;">
         123-456-7890
@@ -145,8 +144,8 @@ body {
  
    
 <div class="print_icon"  style="margin-left:1100px; margin-top:10px;  position:absolute;">
-<a href="recruiter.html" class="btn btn-success btn-lg" style="color:blue";>
-    <span class="glyphicon glyphicon-user" style="color:white"; ></span> Recruiter Login
+<a href="login.jsp" class="btn btn-success btn-lg" style="color:blue";>
+    <span class="glyphicon glyphicon-user" style="color:white"; ></span>Login
   </a>
 
 </div>
