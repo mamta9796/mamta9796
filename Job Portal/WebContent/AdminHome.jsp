@@ -73,7 +73,7 @@
                 <ul id="menu">
 				<li class="active"><a href="">Home</a></li>
 				<li><a href="AboutUs.jsp">About Us</a></li>
-                 <li><a href="#">Hiring plans</a></li>
+                 <li><a href="contact.jsp">Contact Us</a></li>
                  <li><a href="homepage.jsp">job seekers?</a></li>		                               
 		</ul></div>
    <div class="contect" style="margin-left:700px; margin-top:3px;position:absolute;">

@@ -75,9 +75,10 @@ public class ResumeUploadController extends HttpServlet {
 		boolean r=daoObj.Document(d);
 		if(r){
 			
-			RequestDispatcher rd=request.getRequestDispatcher("ViewResume.jsp");
-			request.setAttribute("msg", "resume uploaded");
-			rd.forward(request, response);
+			//RequestDispatcher rd=request.getRequestDispatcher("viewResume");
+			session.setAttribute("msg", "resume uploaded");
+			response.sendRedirect("viewResume");
+			//rd.forward(request, response);
 		}
 		else {
 			

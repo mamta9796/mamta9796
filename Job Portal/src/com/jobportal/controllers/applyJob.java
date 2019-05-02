@@ -22,23 +22,27 @@ import com.jobportal.daosimpl.JobDaoImpl;
 import com.jobportal.models.Employer;
 import com.jobportal.models.Job;
 
-@WebServlet("/updateJob")
-public class UpdateJob extends HttpServlet {
+@WebServlet("/apply")
+public class applyJob extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		response.setContentType("text/html");
-		
-		int id=Integer.parseInt(request.getParameter("jId"));
-		
-		JobDao jDao=new JobDaoImpl();
-		Job job1=jDao.getJobById(id);		
-		
-		request.setAttribute("jobObj",job1);
-		RequestDispatcher rd=request.getRequestDispatcher("updatejob.jsp");
-		rd.forward(request, response);
-		
+		String s1=request.getParameter("useremailId");
+					
+		JobDao jDao=new JobDaoImpl();                            
+		boolean r=jDao.applyJob(s1);                              
+		if(r==true){
+			RequestDispatcher rd=request.getRequestDispatcher("viewalljobtouser.jsp");
+			request.setAttribute("msg","job applied successfully");
+			rd.forward(request, response);	
+			
 		}
-	}                                                                   
+		else {
+			request.setAttribute("msg1","Problem in Applying Job . Try again");
+		}
+			
+		}
+}
 

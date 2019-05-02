@@ -18,9 +18,10 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Job Portal</a>
+       <li>  <a class="navbar-brand" href="#">Job Portal</a></li>
     </div>
     <ul class="nav navbar-nav">
+ 
       <li><a href="homepage.jsp">Home</a></li>
       <li><a href="AboutUs.jsp">About Us </a></li>
       <li><a href="contact.jsp">Contact Us </a></li>

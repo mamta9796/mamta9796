@@ -12,6 +12,14 @@ public class Job {
 	private String location;  
 	private int vacancy;
 	private String employerId;
+	private Date appliedDate;
+		
+	public Date getAppliedDate() {
+		return appliedDate;
+	}
+	public void setAppliedDate(Date appliedDate) {
+		this.appliedDate = appliedDate;
+	}
 	public int getJobId() {
 		return jobId;
 	}

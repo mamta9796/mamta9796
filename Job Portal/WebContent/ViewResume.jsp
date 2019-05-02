@@ -11,13 +11,15 @@
 		</div>
 	</c:if>
 	<h1>View Resume</h1>
+	<form  method="post">
 			<table class="table table-hover">				
 					<tr>						
 						<td>
 						${sessionScope.resume1}
-						<img src="images/${sessionScope.resume1}"/></td>		
+						<img src="RESUME1//${sessionScope.resume1}"/></td>		
 					</tr>
 				</table>
+				</form>
 	 </div>
 <div style="margin-top:470px">
 <jsp:include page="Footer.jsp"/>

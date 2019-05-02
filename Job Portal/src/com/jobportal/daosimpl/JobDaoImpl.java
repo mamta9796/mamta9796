@@ -115,11 +115,9 @@ public class JobDaoImpl implements JobDao {
 		try {
 			Connection conn=ConnectionProvider.getConnection();
 			PreparedStatement ps=null;
-			
-			
+						
 			if(recruiterEmail.equals("NotApplicable")){
-			ps=conn.prepareStatement("select * from JobTab");
-			
+			ps=conn.prepareStatement("select * from JobTab");			
 			}
 			else {
 				ps=conn.prepareStatement("select * from JobTab where email=?");
@@ -139,8 +137,7 @@ public class JobDaoImpl implements JobDao {
 				obj.setVacancy(rs.getInt(9));
 				obj.setEmployerId(rs.getString(8));			
 				
-				job.add(obj);
-				
+				job.add(obj);				
 			}
 			}
 			catch(Exception e){
@@ -149,4 +146,30 @@ public class JobDaoImpl implements JobDao {
 		return job;
 	}
 
+	@Override
+	public boolean applyJob(String email1) {
+		try {
+			Connection conn=ConnectionProvider.getConnection();
+			PreparedStatement ps=conn.prepareStatement("select * from JobTab where email=?");
+			ps.setString(1,email1);
+			ResultSet rs=ps.executeQuery();
+			if(rs.next())
+			{int id=rs.getInt(1);
+			 String s1=rs.getString(8);	
+					 
+			 PreparedStatement ps1=conn.prepareStatement("insert into applyjobtab values(ajobseq.nextval,?,?)");
+			 ps1.setInt(1,id);
+			 ps1.setString(2,s1);    
+			 
+				int i=ps.executeUpdate();
+				if(i!=0){
+					return true;
+				}
+			}
+			}
+			catch(Exception e){
+				e.printStackTrace();
+			}
+		return false;
+	}
 }

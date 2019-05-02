@@ -10,4 +10,5 @@ public interface JobDao {
 	public boolean updateJob(Job jobObj);
 	public Job getJobById(int jobId);
 	public List<Job> getAllJob(String recruiterEmail);
+	public boolean applyJob(String email1);
 }

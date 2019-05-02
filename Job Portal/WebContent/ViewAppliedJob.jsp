@@ -9,7 +9,7 @@
 			${msg}
 		</div>
 	</c:if>
-	<h1>List of Jobs</h1>
+	<h1>List of Applied Jobs</h1>
 	<c:choose>
 		<c:when test="${jList.size() eq 0}">
 			No Jobs Found...
@@ -39,10 +39,7 @@
 						<td>${jobObj.location}</td>
 						<td>${jobObj.vacancy}</td>
 						<td>${jobObj.employerId}</td>
-						<td>
-							<a href="apply?useremailId=${jobObj.employerId}">Apply</a>
-						</td>
-						
+												
 					</tr>
 				</c:forEach>
 			</table>

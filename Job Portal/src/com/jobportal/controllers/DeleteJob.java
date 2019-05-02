@@ -29,7 +29,6 @@ public class DeleteJob extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		response.setContentType("text/html");
-		PrintWriter out=response.getWriter();
 		int id=Integer.parseInt(request.getParameter("jId"));
 		
 		HttpSession session=request.getSession();
@@ -50,5 +49,5 @@ public class DeleteJob extends HttpServlet {
 		rd.forward(request, response);
 		
 		}
-	}
+}
 
